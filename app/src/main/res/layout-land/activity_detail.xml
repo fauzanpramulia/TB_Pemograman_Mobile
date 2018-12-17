@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#eee">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -12,19 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#eee"
-        tools:context=".DetailActivity"
-        >
+        tools:context=".DetailActivity">
 
         <ImageView
             android:id="@+id/imageDetail"
-            android:layout_width="421dp"
-            android:layout_height="463dp"
-            android:layout_marginEnd="46dp"
-            android:layout_marginStart="46dp"
+            android:layout_width="301dp"
+            android:layout_height="0dp"
             android:adjustViewBounds="true"
             android:cropToPadding="false"
             android:scaleType="centerCrop"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/nutcracker" />
@@ -34,12 +32,12 @@
             android:layout_width="109dp"
             android:layout_height="29dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/shape_time"
+            android:fontFamily="@font/century_gothic"
             android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageDetail"
-            android:fontFamily="@font/century_gothic">
+            app:layout_constraintStart_toEndOf="@+id/imageDetail"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -61,7 +59,7 @@
 
                 android:layout_weight="1"
                 android:paddingRight="5dp"
-                android:text="@string/_10_00_wib"
+                android:text="10.00 WIB"
                 android:textAlignment="gravity"
                 android:textColor="@android:color/background_light"
                 android:textSize="12sp"
@@ -75,11 +73,11 @@
             android:layout_width="wrap_content"
             android:layout_height="29dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/shape_date"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageDetail">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageView65"
@@ -103,7 +101,7 @@
                 android:layout_weight="1"
                 android:paddingLeft="5dp"
                 android:paddingRight="10dp"
-                android:text="@string/_29_september_2018"
+                android:text="29 September 2018"
                 android:textAlignment="gravity"
                 android:textColor="@android:color/background_light"
                 android:textSize="12sp"
@@ -116,21 +114,21 @@
         <android.support.v7.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="273dp"
             android:layout_marginBottom="60dp"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageDetail"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
                 android:layout_marginTop="14dp">
 
@@ -141,7 +139,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:text="@string/nama_mahasiswa"
+                    android:text="Nama Mahasiswa"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -149,12 +147,13 @@
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="210dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
                     android:layout_weight="1"
-                    android:text="@string/nim"
+                    android:text="NIM"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toBottomOf="@+id/textDetailMatkul"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/textDetailNama"
@@ -164,7 +163,7 @@
                     android:layout_marginTop="5dp"
                     android:ellipsize="end"
                     android:maxWidth="225dp"
-                    android:text="@string/fauzan_pramulia"
+                    android:text="Syifa Chairunnisa Delivia Akbar"
                     android:textColor="@android:color/background_dark"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -175,9 +174,9 @@
                     android:id="@+id/textDetailBp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="210dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="@string/_1511522019"
+                    android:text="1511522019"
                     android:textColor="@android:color/background_dark"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -190,19 +189,19 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
-                    android:text="@string/matakuliah"
+                    android:text="Matakuliah"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textDetailNama" />
 
                 <TextView
                     android:id="@+id/textDetailMatkul"
-                    android:layout_width="151dp"
-                    android:layout_height="57dp"
+                    android:layout_width="225dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:ellipsize="end"
                     android:maxWidth="225dp"
-                    android:text="@string/statistika_dan_probabilistik_bisnis"
+                    android:text="Statistika dan Probabilistik Bisnis"
                     android:textColor="@android:color/background_dark"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -213,19 +212,19 @@
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="210dp"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/kelas"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Kelas"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textDetailNama" />
+                    app:layout_constraintTop_toBottomOf="@+id/textDetailBp" />
 
                 <TextView
                     android:id="@+id/textDetailKelas"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
-                    android:layout_marginStart="210dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="@string/_01_a"
+                    android:text="01 (A)"
                     android:textColor="@android:color/background_dark"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -237,9 +236,10 @@
         </android.support.v7.widget.CardView>
 
         <FrameLayout
+            android:id="@+id/frameLayout"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="32dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:background="@drawable/shape_date"
@@ -247,7 +247,8 @@
             android:translationZ="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.485"
+            app:layout_constraintStart_toEndOf="@+id/imageDetail">
 
             <Button
                 android:id="@+id/buttonShare"

@@ -25,7 +25,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/edit_text_cutomize"
         android:ems="10"
-        android:hint="Ex: 1511521013"
+        android:hint="Ex: 1511522019"
         android:inputType="textPersonName"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,7 +51,7 @@
         android:layout_marginTop="5dp"
         android:background="@drawable/edit_text_cutomize"
         android:ems="10"
-        android:hint="Ex: Yolanda Parawita"
+        android:hint="Ex: Fauzan Pramulia"
         android:inputType="textPersonName"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -125,14 +125,43 @@
         app:layout_constraintTop_toBottomOf="@+id/editKelas" />
 
     <Button
+
         android:id="@+id/save"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="#008017"
+        android:background="@color/colorPrimary"
         android:text="Save"
+        android:foreground="?android:selectableItemBackground"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageViewSaja"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-30dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386" />
 </android.support.constraint.ConstraintLayout>

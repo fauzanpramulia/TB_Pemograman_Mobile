@@ -10,4 +10,5 @@
     <string name="nim">NIM</string>
     <string name="_29_september_2018">29 September 2018</string>
     <string name="_10_00_wib">10.00 WIB</string>
+    <string name="read_file">This app needs access to your file storage so that it can read photos.</string>
 </resources>

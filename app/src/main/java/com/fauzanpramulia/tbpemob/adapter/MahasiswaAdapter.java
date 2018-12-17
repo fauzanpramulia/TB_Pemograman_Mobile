@@ -64,7 +64,7 @@ public class MahasiswaAdapter extends RecyclerView.Adapter<MahasiswaAdapter.Maha
                 holder.textMataKuliah.setText(mahasiswa.getMata_kuliah());
                 holder.textWaktu.setText(waktuString);
 
-                String url = "http://image.tmdb.org/t/p/w300" + mahasiswa.getFoto();
+                String url = "http://192.168.42.232:8000/image/" + mahasiswa.getFoto();
                 Glide.with(holder.itemView)
                         .load(url)
                         .into(holder.imageFoto);
